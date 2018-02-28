@@ -7,6 +7,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.bdd.bangindong.testbdd.SplashActivity;
+import com.bdd.bangindong.testbdd.until.ActivityFinisher;
 
 import org.junit.After;
 import org.junit.Before;
@@ -37,7 +38,7 @@ public class StepStartProgram {
 
     @After
     public void tearDown() throws Exception {
-
+        ActivityFinisher.finishOpenActivities();
     }
 
     @Given("^I have Splash screen$")
