@@ -1,4 +1,4 @@
-package com.bdd.bangindong.testbdd.runner;
+package com.bdd.bangindong.testbdd.cucumber.runner;
 
 import android.os.Bundle;
 import android.support.test.runner.AndroidJUnitRunner;
