@@ -1,5 +1,6 @@
 package com.bdd.bangindong.testbdd.cucumber.steps;
 
+
 import android.app.Activity;
 import android.content.Intent;
 import android.support.test.rule.ActivityTestRule;
@@ -12,10 +13,16 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.runner.RunWith;
 
+import cucumber.api.PendingException;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(AndroidJUnit4.class)
 public class StepStartProgram {
+
     private Activity mActivity;
 
     @Rule
@@ -31,5 +38,23 @@ public class StepStartProgram {
     @After
     public void tearDown() throws Exception {
 
+    }
+
+    @Given("^I have Splash screen$")
+    public void iHaveSplashScreen() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @When("^I wait (\\d+) second$")
+    public void iWaitSecond(int arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
+    }
+
+    @Then("^Change to LoginActivity$")
+    public void changeToLoginActivity() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException();
     }
 }
