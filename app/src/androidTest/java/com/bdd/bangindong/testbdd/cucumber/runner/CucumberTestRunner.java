@@ -5,10 +5,6 @@ import android.support.test.runner.AndroidJUnitRunner;
 
 import cucumber.api.android.CucumberInstrumentationCore;
 
-/**
- * Created by bangindong on 2/28/2018.
- */
-
 public class CucumberTestRunner extends AndroidJUnitRunner {
 
     private final CucumberInstrumentationCore instrumentationCore = new CucumberInstrumentationCore(this);
