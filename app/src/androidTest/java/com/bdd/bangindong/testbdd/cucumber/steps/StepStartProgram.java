@@ -25,7 +25,6 @@ import gherkin.lexer.Th;
 
 import static org.junit.Assert.assertNotNull;
 
-@RunWith(AndroidJUnit4.class)
 public class StepStartProgram {
 
     private Activity mActivity;
