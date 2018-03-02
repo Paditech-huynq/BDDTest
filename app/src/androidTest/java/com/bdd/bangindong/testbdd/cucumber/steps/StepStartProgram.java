@@ -8,6 +8,7 @@ import android.support.test.runner.AndroidJUnit4;
 
 import com.bdd.bangindong.testbdd.SplashActivity;
 import com.bdd.bangindong.testbdd.cucumber.pages.BasePage;
+import com.bdd.bangindong.testbdd.cucumber.pages.LoginPage;
 import com.bdd.bangindong.testbdd.cucumber.pages.SplashPage;
 import com.bdd.bangindong.testbdd.until.ActivityFinisher;
 
@@ -61,6 +62,6 @@ public class StepStartProgram {
 
     @Then("^Change to LoginActivity$")
     public void changeToLoginActivity()  {
-
+        mCurrenPage = new LoginPage();
     }
 }
