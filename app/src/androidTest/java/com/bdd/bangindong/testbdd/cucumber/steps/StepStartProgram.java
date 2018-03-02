@@ -7,14 +7,16 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.bdd.bangindong.testbdd.SplashActivity;
+import com.bdd.bangindong.testbdd.cucumber.pages.BasePage;
+import com.bdd.bangindong.testbdd.cucumber.pages.SplashPage;
 import com.bdd.bangindong.testbdd.until.ActivityFinisher;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.runner.RunWith;
 
 import cucumber.api.PendingException;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -25,9 +27,10 @@ import static org.junit.Assert.assertNotNull;
 public class StepStartProgram {
 
     private Activity mActivity;
+    private BasePage mCurrenPage;
 
     @Rule
-    private ActivityTestRule<SplashActivity> mActivityRule = new ActivityTestRule<SplashActivity>(SplashActivity.class,
+    private ActivityTestRule<SplashActivity> mActivityRule = new ActivityTestRule<>(SplashActivity.class,
             false, false);
 
     @Before
@@ -42,20 +45,17 @@ public class StepStartProgram {
     }
 
     @Given("^I have Splash screen$")
-    public void iHaveSplashScreen() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iHaveSplashScreen()  {
+        mCurrenPage = new SplashPage();
     }
 
     @When("^I wait (\\d+) second$")
-    public void iWaitSecond(int arg0) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void iWaitSecond(int arg0) {
+
     }
 
     @Then("^Change to LoginActivity$")
-    public void changeToLoginActivity() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void changeToLoginActivity()  {
+
     }
 }

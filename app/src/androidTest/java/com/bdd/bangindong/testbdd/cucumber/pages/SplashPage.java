@@ -1,5 +1,16 @@
 package com.bdd.bangindong.testbdd.cucumber.pages;
 
 
-public class SplashPage {
+import com.bdd.bangindong.testbdd.R;
+
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+
+public class SplashPage extends BasePage{
+
+    public SplashPage() {
+        onView(withId(R.id.splash_activity)).check(matches(isDisplayed()));
+    }
 }
