@@ -20,6 +20,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import gherkin.lexer.Th;
 
 import static org.junit.Assert.assertNotNull;
 
@@ -51,7 +52,11 @@ public class StepStartProgram {
 
     @When("^I wait (\\d+) second$")
     public void iWaitSecond(int arg0) {
-
+        try {
+            Thread.sleep((long)(arg0*1000));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Then("^Change to LoginActivity$")
