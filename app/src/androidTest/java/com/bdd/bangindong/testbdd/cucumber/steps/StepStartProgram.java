@@ -3,9 +3,11 @@ package com.bdd.bangindong.testbdd.cucumber.steps;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Debug;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.bdd.bangindong.testbdd.LoginActivity;
 import com.bdd.bangindong.testbdd.SplashActivity;
 import com.bdd.bangindong.testbdd.cucumber.pages.BasePage;
 import com.bdd.bangindong.testbdd.cucumber.pages.LoginPage;
@@ -21,17 +23,15 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gherkin.lexer.Th;
 
 import static org.junit.Assert.assertNotNull;
 
-public class StepStartProgram {
+public class StepStartProgram{
 
-    private Activity mActivity;
-    private BasePage mCurrenPage;
-
+    BasePage mCurrenPage;
+    Activity mActivity;
     @Rule
-    private ActivityTestRule<SplashActivity> mActivityRule = new ActivityTestRule<>(SplashActivity.class,
+    private ActivityTestRule<LoginActivity> mActivityRule = new ActivityTestRule<>(LoginActivity.class,
             false, false);
 
     @Before
@@ -44,10 +44,9 @@ public class StepStartProgram {
     public void tearDown() throws Exception {
         ActivityFinisher.finishOpenActivities();
     }
-
     @Given("^I have Splash screen$")
     public void iHaveSplashScreen()  {
-        mCurrenPage = new SplashPage();
+        this.mCurrenPage = new SplashPage();
     }
 
     @When("^I wait (\\d+) second$")
